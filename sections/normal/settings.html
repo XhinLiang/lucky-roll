@@ -1,0 +1,55 @@
+<template class="task-template">
+  <section id="crash-hang-section" class="section js-section u-category-windows">
+    <header class="section-header">
+      <div class="section-wrapper">
+        <h1>
+          <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
+          配置
+        </h1>
+        <h3>普通抽奖根据奖品的数目来决定抽奖的结果，一定把奖品都抽完</h3>
+      </div>
+    </header>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="new-window-demo-toggle" class="js-container-target demo-toggle-button">
+          奖品配置
+          <div class="demo-meta u-avoid-clicks">在这里输入各类奖品的配置</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <button class="demo-button" id="btn_choose_item">选择文件</button>
+          </div>
+          <div class="demo-protip">
+            <h2>奖品清单</h2>
+            <strong>这里包含了所有的奖品</strong>
+            <pre><code class="language-js" id="code-item" ></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="new-window-demo-toggle" class="js-container-target demo-toggle-button">抽奖人员配置
+          <div class="demo-meta u-avoid-clicks">在这里输入参与抽奖的人员的配置文件</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <button class="demo-button" id="btn_choose_people">选择文件</button>
+          </div>
+          <div class="demo-protip">
+            <h2>人员清单</h2>
+            <pre><code class="language-js" id="code-people" ></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      require('./renderer-process/normal/select-item');
+      require('./renderer-process/normal/select-people');
+    </script>
+
+  </section>
+</template>
