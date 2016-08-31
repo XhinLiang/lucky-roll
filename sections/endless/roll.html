@@ -1,0 +1,24 @@
+<template class="task-template">
+  <section id="endless-roll-section" class="section js-section u-category-endless">
+    <header class="section-header">
+      <div class="section-wrapper">
+        <h1>
+          <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
+          正式抽奖
+        </h1>
+        <h3>无尽抽奖可以重复中奖</h3>
+        <button class="demo-button" id="btn_roll">抽奖</button>
+      </div>
+    </header>
+    <body>
+        <div class="demo-protip" id="div_content">
+            <h2>幸运儿</h2>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        require('./renderer-process/endless/roll');
+    </script>
+
+  </section>
+</template>

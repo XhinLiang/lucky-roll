@@ -3,7 +3,6 @@ itemStore.items = [];
 itemStore.setItemsPath = function(path) {
     this.items = require(path);
 }
-// 弹出一个奖品的逻辑
 itemStore.popItem = function() {
     if (this.items.length < 1) {
         return null;

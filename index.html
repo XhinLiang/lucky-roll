@@ -12,8 +12,10 @@
   <link rel="stylesheet" href="assets/css/demo.css">
   <link rel="stylesheet" href="assets/css/github.css">
   <link rel="import" href="sections/about.html">
-  <link rel="import" href="sections/normal/play-roll.html">
-  <link rel="import" href="sections/normal/settings.html">
+  <link rel="import" href="sections/normal/roll.html">
+  <link rel="import" href="sections/normal/preference.html">
+  <link rel="import" href="sections/endless/roll.html">
+  <link rel="import" href="sections/endless/preference.html">
 </head>
 <body>
 
@@ -23,13 +25,22 @@
       <svg class="nav-header-icon"><use xlink:href="assets/img/icons.svg#icon-electron"></use></svg>
     </header>
 
-    <div class="nav-item u-category-windows">
+    <div class="nav-item u-category-normal">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
         普通抽奖
       </h5>
-      <button type="button" id="button-windows" data-section="windows" class="nav-button">抽奖</button>
-      <button type="button" id="button-crash-hang" data-section="crash-hang" class="nav-button">配置</button>
+      <button type="button" id="button-normal-roll" data-section="normal-roll" class="nav-button">抽奖</button>
+      <button type="button" id="button-normal-preference" data-section="normal-preference" class="nav-button">配置</button>
+    </div>
+
+    <div class="nav-item u-category-endless">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
+        无尽抽奖
+      </h5>
+      <button type="button" id="btn-endless-roll" data-section="endless-roll" class="nav-button">抽奖</button>
+      <button type="button" id="btn-endless-preference" data-section="endless-preference" class="nav-button">配置</button>
     </div>
 
     <footer class="nav-footer">

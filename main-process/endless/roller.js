@@ -10,6 +10,10 @@ let roll = function() {
         showDialogNoItem();
         return null;
     }
+    if (!people) {
+        showDialogNoPeople();
+        return null;
+    }
     return item['name'] + ' : ' + people['name'];
 };
 
@@ -20,13 +24,26 @@ const optionsNoItem = {
     buttons: ['好的', '泥煤']
 };
 
+const optionsNoPeople = {
+    type: 'info',
+    title: '不能再抽啦',
+    message: "每个人都有奖品了",
+    buttons: ['好的', '泥煤']
+};
+
 function showDialogNoItem() {
     dialog.showMessageBox(optionsNoItem, function(index) {
         //pass
     });
 }
 
+function showDialogNoPeople() {
+    dialog.showMessageBox(optionsNoPeople, function(index) {
+        //pass
+    });
+}
+
 ipc.on('roll', function(event) {
     let result = roll();
-    event.sender.send('roll-result', result);
+    event.sender.send('endless-roll-result', result);
 });
