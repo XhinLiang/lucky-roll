@@ -1,45 +1,49 @@
 {
-  "name": "Lucky-Roll",
-  "productName": "幸运抽奖",
-  "version": "1.1.0",
-  "description": "Roll for lucky",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "dev": "electron . --debug",
-    "test": "mocha tests"
-  },
-  "keywords": [
-    "Electron",
-    "Roll"
-  ],
-  "author": "Xhin Liang",
-  "license": "MIT",
-  "homepage": "https://github.com/XhinLiang/lucky-roll",
-  "devDependencies": {
-    "chai": "^3.4.1",
-    "chai-as-promised": "^5.1.0",
-    "devtron": "^1.0.0",
-    "electron-packager": "^7.0.1",
-    "electron-prebuilt": "^1.2.6",
-    "electron-windows-store": "^0.3.0",
-    "electron-winstaller": "^2.2.0",
-    "mocha": "^2.3.4",
-    "request": "^2.70.0",
-    "rimraf": "^2.5.2",
-    "signcode": "^0.4.0",
-    "spectron": "~3.2.6",
-    "standard": "^6.0.8"
-  },
-  "dependencies": {
-    "electron-json-storage": "^2.0.0",
-    "electron-shortcut-normalizer": "^1.0.0",
-    "glob": "^6.0.4",
-    "highlight.js": "^9.3.0"
-  },
-  "standard": {
-    "env": {
-      "mocha": true
+    "name": "Lucky-Roll",
+    "productName": "幸运抽奖",
+    "version": "1.1.0",
+    "code": 303,
+    "description": "Roll for lucky",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "dev": "electron . --debug",
+        "pack-mac": "electron-packager . --asar --asar-unpack=protocol-link.html --overwrite --platform=darwin --arch=x64 --icon=assets/app-icon/mac/app.icns --prune=true --out=out --extend-info=assets/mac/info.plist",
+        "pack-linux": "electron-packager . --asar --asar-unpack=protocol-link.html --overwrite --platform=linux --arch=x64 --icon=assets/app-icon/png/64.png --prune=true --out=out",
+        "pack-win": "electron-packager . Lucky-Roll --asar --asar-unpack=protocol-link.html --overwrite --platform=win32 --arch=x64 --icon=assets/app-icon/win/app.ico --prune=true --out=out --version-string.CompanyName='XhinLiang' --version-string.FileDescription='Lucky-Roll' --version-string.ProductName='Lucky-Roll'",
+        "test": "mocha tests"
+    },
+    "keywords": [
+        "Electron",
+        "Roll"
+    ],
+    "author": "Xhin Liang",
+    "license": "MIT",
+    "homepage": "https://github.com/XhinLiang/lucky-roll",
+    "devDependencies": {
+        "chai": "^3.4.1",
+        "chai-as-promised": "^5.1.0",
+        "devtron": "^1.0.0",
+        "electron-packager": "^7.0.1",
+        "electron-prebuilt": "^1.2.6",
+        "electron-windows-store": "^0.3.0",
+        "electron-winstaller": "^2.2.0",
+        "mocha": "^2.3.4",
+        "request": "^2.70.0",
+        "rimraf": "^2.5.2",
+        "signcode": "^0.4.0",
+        "spectron": "~3.2.6",
+        "standard": "^6.0.8"
+    },
+    "dependencies": {
+        "electron-json-storage": "^2.0.0",
+        "electron-shortcut-normalizer": "^1.0.0",
+        "glob": "^6.0.4",
+        "highlight.js": "^9.3.0"
+    },
+    "standard": {
+        "env": {
+            "mocha": true
+        }
     }
-  }
 }

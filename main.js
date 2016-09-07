@@ -10,7 +10,8 @@ const debug = /--debug/.test(process.argv[2]);
 if (process.mas) {
     app.setName('Lucky Roll');
 }
-var mainWindow = null;
+
+let mainWindow = null;
 
 function initialize() {
     let shouldQuit = makeSingleInstance();
@@ -18,7 +19,11 @@ function initialize() {
         return app.quit();
     }
 
-    loadDemos();
+    // load files
+    var files = glob.sync(path.join(__dirname, 'main-process/**/*.js'));
+    files.forEach(function(file) {
+        require(file);
+    })
 
     function createWindow() {
         let windowOptions = {
@@ -56,6 +61,10 @@ function initialize() {
         }
     });
 
+    app.on('window-all-closed', function() {
+        console.log('hehe');
+    });
+
     app.on('activate', function() {
         if (mainWindow === null) {
             createWindow();
@@ -83,18 +92,10 @@ function makeSingleInstance() {
     });
 }
 
-// Require each JS file in the main-process dir
-function loadDemos() {
-    var files = glob.sync(path.join(__dirname, 'main-process/**/*.js'));
-    files.forEach(function(file) {
-        require(file);
-    })
-}
-
-// Handle Squirrel on Windows startup events
+// 在这里添加一些运行的参数
 switch (process.argv[1]) {
-    case '--squirrel-obsolete':
-    case '--squirrel-updated':
+    case '--prod':
+    case '--test':
         break;
     default:
         initialize();
