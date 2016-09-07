@@ -4,7 +4,9 @@ const ipc = require('electron').ipcMain;
 const dialog = require('electron').dialog;
 
 let roll = function() {
+    // 从奖品中抽取一个作为奖品
     let item = itemStore.popItem();
+    // 从抽奖人员中抽取一个作为中奖的幸运儿
     let people = peopleStore.popPeople();
     if (!item) {
         showDialogNoItem();

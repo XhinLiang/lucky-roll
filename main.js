@@ -1,7 +1,6 @@
 const path = require('path');
 const glob = require('glob');
 const electron = require('electron');
-
 const BrowserWindow = electron.BrowserWindow;
 const app = electron.app;
 
@@ -18,7 +17,6 @@ function initialize() {
     if (shouldQuit) {
         return app.quit();
     }
-
     // load files
     var files = glob.sync(path.join(__dirname, 'main-process/**/*.js'));
     files.forEach(function(file) {
