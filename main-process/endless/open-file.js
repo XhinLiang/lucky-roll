@@ -1,4 +1,5 @@
 const ipc = require('electron').ipcMain;
+// require the main-process dialog service
 const dialog = require('electron').dialog;
 
 const itemStore = require('./item-store');
@@ -11,6 +12,7 @@ const options = {
         extensions: ['json']
     }]
 };
+
 ipc.on('open-file-item', function(event) {
     dialog.showOpenDialog(options, function(files) {
         if (files) {
