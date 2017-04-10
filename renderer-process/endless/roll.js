@@ -1,12 +1,12 @@
 const ipc = require('electron').ipcRenderer;
-const btnRoll = document.getElementById('btn_roll');
-const domContent = document.getElementById('div_content');
+const btnRoll = document.getElementById('btn_endless_roll');
+const domContent = document.getElementById('div_endless_content');
 
-btnRoll.addEventListener('click', function() {
-    ipc.send('wefewfwf');
+btnRoll.addEventListener('click', function () {
+    ipc.send('endless-roll');
 })
 
-ipc.on('wefwefewf', function(event, result) {
+ipc.on('endless-roll-result', function (event, result) {
     if (!result) {
         return;
     }

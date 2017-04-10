@@ -12,19 +12,19 @@ const options = {
     }]
 };
 
-ipc.on('wwwwww', function(event) {
-    dialog.showOpenDialog(options, function(files) {
+ipc.on('endless-select-item', function (event) {
+    dialog.showOpenDialog(options, function (files) {
         if (files) {
-            event.sender.send('wsdvwsefw', files[0]);
+            event.sender.send('endless-select-item-result', files[0]);
             itemStore.setItemsPath(files[0]);
         }
     })
 });
 
-ipc.on('wwwwwwwww', function(event) {
-    dialog.showOpenDialog(options, function(files) {
+ipc.on('endless-select-people', function (event) {
+    dialog.showOpenDialog(options, function (files) {
         if (files) {
-            event.sender.send('wefewfewf', files[0]);
+            event.sender.send('endless-select-people-result', files[0]);
             peopleStore.setPeoplePath(files[0]);
         }
     })

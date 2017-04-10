@@ -2,11 +2,10 @@ let peopleStore = {};
 peopleStore.people = [];
 peopleStore.setPeoplePath = function(path) {
     this.people = require(path);
-    //console.log(JSON.stringify(this.people));
 };
 
 function getRandom(n, m) {
-    //省略特殊情形下的处理过程，比如n>m，或者n、m之一无法转化为有效数字；
+    // 省略特殊情形下的处理过程，比如n>m，或者n、m之一无法转化为有效数字；
     return Math.round(Math.random() * (m - n) + n);
 }
 

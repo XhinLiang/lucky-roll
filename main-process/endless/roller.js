@@ -29,7 +29,7 @@ const optionsNoItem = {
 const optionsNoPeople = {
     type: 'info',
     title: '不能再抽啦',
-    message: "每个人都有奖品了",
+    message: "没有参与抽奖的人呀",
     buttons: ['好的', '泥煤']
 };
 
@@ -45,7 +45,7 @@ function showDialogNoPeople() {
     });
 }
 
-ipc.on('wwwwwww', function(event) {
+ipc.on('endless-roll', function(event) {
     let result = roll();
-    event.sender.send('wwwwwwwww', result);
+    event.sender.send('endless-roll-result', result);
 });
