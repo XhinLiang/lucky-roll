@@ -13,19 +13,19 @@ const options = {
     }]
 };
 
-ipc.on('open-file-item', function(event) {
+ipc.on('wwwwww', function(event) {
     dialog.showOpenDialog(options, function(files) {
         if (files) {
-            event.sender.send('endless-selected-item', files[0]);
+            event.sender.send('wsdvwsefw', files[0]);
             itemStore.setItemsPath(files[0]);
         }
     })
 });
 
-ipc.on('open-file-people', function(event) {
+ipc.on('wwwwwwwww', function(event) {
     dialog.showOpenDialog(options, function(files) {
         if (files) {
-            event.sender.send('endless-selected-people', files[0]);
+            event.sender.send('wefewfewf', files[0]);
             peopleStore.setPeoplePath(files[0]);
         }
     })

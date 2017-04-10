@@ -45,7 +45,7 @@ function showDialogNoPeople() {
     });
 }
 
-ipc.on('roll', function(event) {
+ipc.on('wwwwwww', function(event) {
     let result = roll();
-    event.sender.send('endless-roll-result', result);
+    event.sender.send('wwwwwwwww', result);
 });

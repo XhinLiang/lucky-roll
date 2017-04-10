@@ -3,10 +3,10 @@ const btnChooseItem = document.getElementById('btn_choose_item');
 const parseContent = document.getElementById('code-item');
 
 btnChooseItem.addEventListener('click', function(event) {
-    ipc.send('endless-open-file-item');
+    ipc.send('wefewfxcvsd');
 });
 
-ipc.on('endless-selected-item', function(event, path) {
+ipc.on('wefwef', function(event, path) {
     let jsonArray = require(path);
     let result = '';
     for (item of jsonArray) {

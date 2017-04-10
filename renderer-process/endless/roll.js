@@ -3,10 +3,10 @@ const btnRoll = document.getElementById('btn_roll');
 const domContent = document.getElementById('div_content');
 
 btnRoll.addEventListener('click', function() {
-    ipc.send('roll');
+    ipc.send('wefewfwf');
 })
 
-ipc.on('endless-roll-result', function(event, result) {
+ipc.on('wefwefewf', function(event, result) {
     if (!result) {
         return;
     }
