@@ -1,6 +1,8 @@
 # lucky-roll
 
 luck-roll is a desktop application which can use for lottery draw.
+
+
 because of the compatibility of `Electron`, `luck-roll` can be run in familiar desktop platforms, such as `Linux`, `Windows` and `macOS`.
 
 ## Run
